@@ -43,28 +43,28 @@ function initSmoothScrolling() {
 
 // Typing animation with dynamic text rotation
 function initTypingAnimation() {
-  const nameText = document.getElementById("name-text");
-  const typedNameSpan = document.getElementById("typed-name");
-  const dynamicTextSpan = document.getElementById("dynamic-text");
+  const typedDescriptionSpan = document.getElementById("typed-description");
   
-  // Check if all required elements exist
-  if (!typedNameSpan || !dynamicTextSpan) {
-    console.warn('Typing animation elements not found');
+  // Check if required element exists
+  if (!typedDescriptionSpan) {
+    console.warn('Typing animation element not found');
     return;
   }
   
-  const name = "Aarya Patel";
   const dynamicPhrases = [
-    "specializing in AI and data science",
-    "building scalable cloud applications",
-    "developing bioinformatics solutions",
-    "passionate about machine learning",
-    "creating innovative software solutions"
+    "I'm a Software Engineer",
+    "I'm an AI/ML Engineer",
+    "I'm a Full-Stack Developer",
+    "I'm a Data Scientist",
+    "I'm a Cloud Solutions Architect",
+    "I'm a Bioinformatics Engineer",
+    "I'm a DevOps Engineer",
+    "I'm a Research Engineer"
   ];
   
   let currentPhraseIndex = 0;
   
-  function typeText(element, text, speed = 100) {
+  function typeText(element, text, speed = 80) {
     return new Promise((resolve) => {
       let index = 0;
       element.textContent = '';
@@ -99,29 +99,28 @@ function initTypingAnimation() {
   async function cycleDynamicText() {
     while (true) {
       // Type the current phrase
-      await typeText(dynamicTextSpan, dynamicPhrases[currentPhraseIndex], 80);
+      await typeText(typedDescriptionSpan, dynamicPhrases[currentPhraseIndex], 100);
       
-      // Wait for 3 seconds
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      // Wait for 2.5 seconds
+      await new Promise(resolve => setTimeout(resolve, 2500));
       
       // Delete the current phrase
-      await deleteText(dynamicTextSpan, 40);
+      await deleteText(typedDescriptionSpan, 60);
       
-      // Wait for 0.5 seconds before typing next phrase
-      await new Promise(resolve => setTimeout(resolve, 500));
+      // Wait for 0.3 seconds before typing next phrase
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       // Move to next phrase
       currentPhraseIndex = (currentPhraseIndex + 1) % dynamicPhrases.length;
     }
   }
   
-  // Start animations after a short delay
-  setTimeout(async () => {
-    await typeText(typedNameSpan, name, 120);
-    // Wait a bit before starting dynamic text
-    await new Promise(resolve => setTimeout(resolve, 800));
+  // Start animation after a short delay
+  setTimeout(() => {
+    // Start with the first phrase immediately to show something is working
+    typedDescriptionSpan.textContent = '';
     cycleDynamicText();
-  }, 1000);
+  }, 1500);
 }
 
 // Navbar scroll effect
