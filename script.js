@@ -47,6 +47,12 @@ function initTypingAnimation() {
   const typedNameSpan = document.getElementById("typed-name");
   const dynamicTextSpan = document.getElementById("dynamic-text");
   
+  // Check if all required elements exist
+  if (!typedNameSpan || !dynamicTextSpan) {
+    console.warn('Typing animation elements not found');
+    return;
+  }
+  
   const name = "Aarya Patel";
   const dynamicPhrases = [
     "specializing in AI and data science",
