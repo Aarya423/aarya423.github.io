@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Aarya Patel - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </head>
   <body>
     <nav id="desktop-nav" class="fade-in">
@@ -14,7 +15,8 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#work-experience">Work</a></li>
+          <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -30,47 +32,145 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#work-experience" onclick="toggleMenu()">Work</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
     <section id="profile" class="fade-in">
-        
+      <div class="particles" id="particles-js"></div>
+      <div class="hero-content">
         <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Aarya Patel profile picture" />
-      </div>
-      <div class="section__text">
-        <p id="name-text" class="section__text__p1">Hello, I'm</p>
-        <h1 id="typed-name" class="title"></h1>
-        <p id="occupation-text" class="section__text__p2">Software Engineering Student</p>
-
-
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+          <div class="profile-card">
+            <img src="./assets/profile-pic.png" alt="Aarya Patel profile picture" />
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              Available for opportunities
+            </div>
+          </div>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/aarya-patel-58547522a/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Aarya423'"
-          />
+        <div class="section__text">
+          <p id="name-text" class="section__text__p1">Hello, I'm</p>
+          <h1 id="typed-name" class="title gradient-text"></h1>
+          <p id="occupation-text" class="section__text__p2">
+            <span class="highlight">Software Engineer</span> 
+            <span id="dynamic-text" class="dynamic-text"></span>
+          </p>
+          <div class="btn-container">
+            <button
+              class="btn btn-primary"
+              onclick="window.open('./assets/resume-example.pdf')"
+            >
+              <i class="download-icon">⬇</i>
+              Download Resume
+            </button>
+            <button class="btn btn-secondary" onclick="location.href='./#contact'">
+              <i class="contact-icon">💬</i>
+              Let's Connect
+            </button>
+          </div>
+          <div id="socials-container">
+            <a href="https://www.linkedin.com/in/aarya-patel-58547522a/" class="social-link linkedin" target="_blank">
+              <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" />
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Aarya423" class="social-link github" target="_blank">
+              <img src="./assets/github.png" alt="GitHub" class="icon" />
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="work-experience" class="fade-in">
+      <p class="section__text__p1">My Professional</p>
+      <h1 class="title">Work Experience</h1>
+      <div class="work-timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="work-card">
+              <div class="work-header">
+                <h3>IT Support Technician</h3>
+                <span class="company">Quantum Lifecycle Partners LP</span>
+                <span class="duration">June 2025 - Present</span>
+              </div>
+              <div class="work-description">
+                <p>Leading device diagnostics and repair operations while contributing to environmental sustainability through secure reuse and recycling initiatives.</p>
+                <ul class="work-highlights">
+                  <li>Diagnosed and repaired 20+ devices weekly, contributing to a 35% reduction in e-waste</li>
+                  <li>Achieved a 90%+ first-pass repair success rate through detailed diagnostics and hardware replacements</li>
+                  <li>Maintained detailed system logs ensuring 100% SLA compliance and improved traceability</li>
+                  <li>Collaborated with cross-functional teams on quality standards and OS configurations</li>
+                </ul>
+              </div>
+              <div class="work-technologies">
+                <span class="tech-tag">Hardware Diagnostics</span>
+                <span class="tech-tag">System Repair</span>
+                <span class="tech-tag">OS Configuration</span>
+                <span class="tech-tag">Quality Assurance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="work-card">
+              <div class="work-header">
+                <h3>Software Developer</h3>
+                <span class="company">IDSL – Intelligent Data Science Lab</span>
+                <span class="duration">September 2024 - April 2025</span>
+              </div>
+              <div class="work-description">
+                <p>Developed Genescope, an AI-powered DNA/RNA analysis platform that revolutionized bioinformatics research through advanced algorithms and cloud infrastructure.</p>
+                <ul class="work-highlights">
+                  <li>Reduced bioinformatics analysis time by 35% through CPS2 algorithm integration</li>
+                  <li>Integrated GPT-2 AI model improving research interpretability by 40%</li>
+                  <li>Built validation system filtering 99.9% of corrupted DNA/RNA sequences</li>
+                  <li>Scaled backend with MongoDB and AWS EC2, increasing processing capacity by 2x</li>
+                </ul>
+              </div>
+              <div class="work-technologies">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">GPT-2</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">AWS EC2</span>
+                <span class="tech-tag">Bioinformatics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="work-card">
+              <div class="work-header">
+                <h3>Security Data Analyst Extern</h3>
+                <span class="company">Webacy Web3 Security Data Analytics</span>
+                <span class="duration">July 2024 - August 2024</span>
+              </div>
+              <div class="work-description">
+                <p>Specialized in blockchain security analysis, improving threat detection and risk prediction models through advanced machine learning techniques.</p>
+                <ul class="work-highlights">
+                  <li>Analyzed 900+ smart contracts, improving threat detection accuracy by 15%</li>
+                  <li>Validated peer data labels, reducing error rates by 10%</li>
+                  <li>Performed correlation analysis identifying common vulnerabilities and associations</li>
+                  <li>Applied unsupervised ML for cluster analysis, improving risk prediction by 12%</li>
+                </ul>
+              </div>
+              <div class="work-technologies">
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Smart Contracts</span>
+                <span class="tech-tag">Risk Analysis</span>
+                <span class="tech-tag">Data Analytics</span>
+                <span class="tech-tag">Web3 Security</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -94,7 +194,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>4+ years<br />Software Development</p>
+              <p>3+ years<br />Software Development</p>
             </div>
             <div class="details-container">
               <img
@@ -103,26 +203,20 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>BESc. Software Engineering<br /></p>
+              <p>BESc. Software Engineering<br />University of Western Ontario</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-                I am currently pursuing my fourth year of Software Engineering at The University of Western Ontario. Passionate about leveraging technology to address real-world challenges, 
-                I am committed to honing my skills in programming languages and software development methodologies. 
-                With a focus on innovation and collaboration, I'm eager to contribute to impactful projects and 
-                grow as a proficient software engineer. 
-                Let's connect and explore opportunities to create meaningful solutions together!
+                I'm a Software Engineer with over 3 years of hands-on experience in full-stack development, AI/ML, and data science. I recently graduated from the University of Western Ontario with a BESc in Software Engineering and have developed expertise in creating scalable applications, bioinformatics platforms, and security analytics solutions.
+                <br><br>
+                My professional experience spans from developing AI-powered DNA/RNA analysis platforms that reduced processing time by 35%, to analyzing blockchain security vulnerabilities, to maintaining enterprise-level IT infrastructure. I specialize in Python, JavaScript, cloud computing, and machine learning technologies.
+                <br><br>
+                Currently working as an IT Support Technician at Quantum Lifecycle Partners while pursuing exciting opportunities in software development and data science.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
     <section id="experience" class="fade-in">
       <p class="section__text__p1">Explore My</p>
@@ -130,8 +224,19 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Programming Languages</h2>
             <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Expert</p>
+                </div>
+              </article>
               <article>
                 <img
                   src="./assets/checkmark.png"
@@ -150,40 +255,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>React</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
+                  <h3>Java</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -195,13 +267,35 @@
                 />
                 <div>
                   <h3>TypeScript</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL/MySQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
+            <h2 class="experience-sub-title">Frameworks & Tools</h2>
             <div class="article-container">
               <article>
                 <img
@@ -210,29 +304,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
+                  <h3>React</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -244,7 +316,7 @@
                 />
                 <div>
                   <h3>Flask</h3>
-                  <p>Experienced</p>
+                  <p>Expert</p>
                 </div>
               </article>
               <article>
@@ -254,7 +326,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>C/C++</h3>
+                  <h3>AWS/Cloud</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -269,16 +341,45 @@
                   <p>Experienced</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Machine Learning</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
     <section id="projects" class="fade-in">
       <p class="section__text__p1">Browse My Recent</p>
@@ -293,7 +394,8 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">CHEER Organization Website Course Project</h2>
+            <h2 class="experience-sub-title project-title">NPO Website</h2>
+            <p class="project-description">Built and deployed a Vite-React platform with Flask backend and MongoDB Atlas integration, enabling secure data access for 50+ caregivers and real-time content management for administrators. Features include responsive design and optimized performance.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -312,7 +414,8 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">PigeonPlex - Secure Flask-Based Cineplex Platform</h2>
+            <h2 class="experience-sub-title project-title">Cinema Showcase Website</h2>
+            <p class="project-description">Developed a full-stack cinema platform with account management, movie search, ticketing, and admin tools. Optimized MySQL queries for 30% faster response times and implemented secure user authentication with Flask backend.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -331,7 +434,8 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Personalized Product Recommendation System</h2>
+            <h2 class="experience-sub-title project-title">Genescope - AI Bioinformatics Platform</h2>
+            <p class="project-description">AI-powered DNA/RNA analysis platform developed at IDSL that reduced bioinformatics analysis time by 35%. Integrated GPT-2 for automated contextual analysis and built scalable backend with MongoDB and AWS EC2.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -343,32 +447,81 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
     <section id="contact" class="fade-in">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:aarypatel1@hotmail.com">aarypatel1@hotmail.com</a></p>
+      <div class="contact-container">
+        <div class="contact-info-section">
+          <div class="contact-intro">
+            <h3>Let's Work Together</h3>
+            <p>I'm always interested in new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hi, I'd love to hear from you!</p>
+          </div>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="./assets/email.png" alt="Email icon" class="contact-icon" />
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:aaryapatel1@hotmail.com">aaryapatel1@hotmail.com</a></p>
+                <span class="contact-time">I'll respond within 24 hours</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="contact-icon" />
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/aarya-patel-58547522a/" target="_blank">Connect with me</a></p>
+                <span class="contact-time">Professional networking</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-icon-wrapper">
+                <img src="./assets/github.png" alt="GitHub icon" class="contact-icon" />
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <p><a href="https://github.com/Aarya423" target="_blank">Check out my code</a></p>
+                <span class="contact-time">Open source contributions</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/aarya-patel-58547522a/">LinkedIn</a></p>
+        <div class="contact-form-section">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgveqged" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="job-opportunity">Job Opportunity</option>
+                <option value="collaboration">Project Collaboration</option>
+                <option value="consultation">Consultation</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+            </div>
+            <input type="hidden" name="_replyto" value="aaryapatel1@hotmail.com">
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_next" value="#contact">
+            <button type="submit" class="btn btn-primary submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;">Sending...</span>
+            </button>
+          </form>
         </div>
       </div>
     </section>
@@ -377,14 +530,16 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#work-experience">Work</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Aarya Patel. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Aarya Patel. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
