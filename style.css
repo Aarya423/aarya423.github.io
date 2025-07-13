@@ -106,11 +106,12 @@ nav {
 }
 
 .nav-links a {
-    color: var(--text-primary);
+    color: #000000 !important;
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
 }
 
 .nav-links a:hover {
@@ -210,7 +211,7 @@ a:hover {
 }
 
 #hamburger-nav .logo {
-    color: var(--text-primary);
+    color: #000000 !important;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -263,10 +264,11 @@ a:hover {
     padding: 1rem 1.5rem;
     text-align: center;
     font-size: 1rem;
-    color: var(--text-primary);
+    color: #000000 !important;
     text-decoration: none;
     transition: all 0.3s ease;
     border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
 }
 
 .menu-links a:last-child {
